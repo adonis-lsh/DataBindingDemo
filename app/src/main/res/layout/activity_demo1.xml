@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="student"
+            type="com.databing.lsh.databindingdemo.Student" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                  xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  tools:context="com.databing.lsh.databindingdemo.Demo1.Demo1Activity">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            app:url="@{student.headerImg}"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@mipmap/zhanwei"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{student.name}"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/intToString(student.age)}"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+</layout>

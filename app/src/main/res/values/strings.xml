@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DataBindingDemo</string>
+
+    <string name="intToString">%s</string>
+</resources>
